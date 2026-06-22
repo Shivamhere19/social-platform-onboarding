@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Review</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI',sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#0f172a,#312e81);
+            padding:20px;
+            color:white;
+        }
+
+        .card{
+            width:100%;
+            max-width:800px;
+            background:rgba(255,255,255,0.08);
+            backdrop-filter:blur(15px);
+            padding:40px;
+            border-radius:20px;
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:30px;
+            font-size:3rem;
+        }
+
+        p{
+            font-size:22px;
+            margin:18px 0;
+            line-height:1.5;
+        }
+
+        strong{
+            color:#ffffff;
+        }
+
+        .btn-group{
+            margin-top:30px;
+        }
+
+        button{
+            padding:12px 25px;
+            border:none;
+            border-radius:10px;
+            cursor:pointer;
+            font-size:16px;
+            font-weight:bold;
+            color:white;
+            background:linear-gradient(90deg,#00c6ff,#7d5fff);
+            margin-right:10px;
+            transition:0.3s;
+        }
+
+        button:hover{
+            transform:translateY(-2px);
+            box-shadow:0 5px 15px rgba(0,198,255,0.4);
+        }
+
+        .success{
+            margin-top:25px;
+            color:#4ade80;
+            font-size:20px;
+            font-weight:bold;
+            text-align:center;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="card">
+
+        <h1>Profile Review</h1>
+
+        <p><strong>Name:</strong> {{ data.name }}</p>
+        <p><strong>Email:</strong> {{ data.email }}</p>
+        <p><strong>Phone:</strong> {{ data.phone }}</p>
+        <p><strong>College:</strong> {{ data.college }}</p>
+        <p><strong>Branch:</strong> {{ data.branch }}</p>
+        <p><strong>Semester:</strong> {{ data.semester }}</p>
+        <p><strong>Skills:</strong> {{ data.skills }}</p>
+        <p><strong>Bio:</strong> {{ data.bio }}</p>
+        <p><strong>Submitted On:</strong> {{ current_time }}</p>
+
+        <div class="btn-group">
+
+            <a href="/">
+                <button type="button">Back</button>
+            </a>
+
+            <button type="button" onclick="window.print()">
+                Download Profile
+            </button>
+
+        </div>
+
+        <p class="success">
+            ✔ Profile Successfully Submitted
+        </p>
+
+    </div>
+
+</body>
+</html>

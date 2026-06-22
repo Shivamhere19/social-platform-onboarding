@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Social Platform Onboarding</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Social Platform</h1>
+        <p>Complete your onboarding profile</p>
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
+        <form id="multiStepForm" action="/review" method="POST">
+
+            <!-- STEP 1 -->
+
+            <div class="step active">
+
+                <h2>Personal Information</h2>
+
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Full Name"
+                       required>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Email Address"
+                       required>
+
+                <input type="text"
+                       id="phone"
+                       name="phone"
+                       placeholder="Phone Number"
+                       required>
+
+                <button type="button" class="next-btn">
+                    Next
+                </button>
+
+            </div>
+
+            <!-- STEP 2 -->
+
+            <div class="step">
+
+                <h2>Academic Information</h2>
+
+                <input type="text"
+                       id="college"
+                       name="college"
+                       placeholder="College Name">
+
+                <input type="text"
+                       id="branch"
+                       name="branch"
+                       placeholder="Branch">
+
+                <input type="number"
+                       id="semester"
+                       name="semester"
+                       placeholder="Semester">
+
+                <button type="button" class="prev-btn">
+                    Previous
+                </button>
+
+                <button type="button" class="next-btn">
+                    Next
+                </button>
+
+            </div>
+
+            <!-- STEP 3 -->
+
+            <div class="step">
+
+                <h2>Community Profile</h2>
+
+                <input type="text"
+                       id="skills"
+                       name="skills"
+                       placeholder="Skills">
+
+                <textarea id="bio"
+                          name="bio"
+                          placeholder="Short Bio"></textarea>
+
+                <button type="button" class="prev-btn">
+                    Previous
+                </button>
+
+                <button type="submit">
+                    Submit
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
