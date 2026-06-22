@@ -1,30 +1,98 @@
 # Student Social Platform Onboarding
 
-## Overview
-A multi-step onboarding system built using Flask, HTML, CSS and JavaScript.
+## Project Overview
+
+This project is a multi-step onboarding system developed as part of the INSIDE Technical Architecture Cohort Pre-Evaluation.
+
+The application allows students to complete their onboarding profile through a structured 3-step process with validation, progress tracking, local data persistence, and profile review functionality.
+
+---
 
 ## Features
-- Multi-step form
-- Form validation
-- Progress tracking
-- Local storage persistence
-- Dynamic profile review page
-- Print/Download profile option
+
+✅ Multi-Step Form Navigation
+
+✅ Input Validation & Error Handling
+
+✅ Progress Bar Tracking
+
+✅ Local Storage Persistence
+
+✅ Profile Review Page
+
+✅ Download / Print Profile
+
+✅ Responsive UI Design
+
+---
 
 ## Technologies Used
+
 - Python
 - Flask
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
+- Local Storage
 
-## Database Design
-The database contains:
-- Users
-- Posts
-- Comments
-- Likes
-- Marketplace Items
+---
 
-## Marketplace Integration Decision
-Marketplace items are linked to users through seller_id. This allows any existing user account to become a seller without creating a separate seller table, making future marketplace integration simpler and more scalable.
+## Project Structure
+
+social-platform-onboarding/
+
+├── app.py
+
+├── schema.sql
+
+├── requirements.txt
+
+├── README.md
+
+├── static/
+
+│ ├── style.css
+
+│ └── script.js
+
+└── templates/
+
+├── index.html
+
+└── review.html
+
+---
+
+## How to Run
+
+1. Install dependencies
+
+pip install -r requirements.txt
+
+2. Start Flask server
+
+python app.py
+
+3. Open browser
+
+http://127.0.0.1:5000
+
+---
+
+## Future Improvements
+
+- User Authentication
+- Database Integration
+- Profile Editing
+- Marketplace Module
+- Cloud Deployment
+
+---
+
+## Author
+
+Shivam Vashisth
+
+B.Tech CSE-DS
+
+RKGIT Ghaziabad
